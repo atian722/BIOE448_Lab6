@@ -35,7 +35,9 @@ void loop() {
       second_pulse_time = millis();
       pulse_period = second_pulse_time - first_pulse_time;
       first_peak_detected = false;
-      Serial.println(pulse_period);
+
+      BPM = 60000/pulse_period;
+      Serial.println(BPM);
     }
   }
 
